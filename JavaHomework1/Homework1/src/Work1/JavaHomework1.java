@@ -43,21 +43,19 @@ public class JavaHomework1 {
         int counter1, counter2, counter3;
         System.out.println("输入第一组数列：");
         counter1 = cin(numbers);
-        System.out.println("你输入的是：");
-        for (i = 0; i < counter1; i++) {
-            System.out.println(numbers[i]+ "  I:"+i);
-        }
         sort(numbers, counter1);
         System.out.println("第一个数组排序后的结果：");
         for (i = 0; i < counter1; i++) {
-            System.out.println(numbers[i]);
+            if (i == 0){
+                System.out.print(numbers[i]);
+            }
+            else{
+                System.out.print(","+numbers[i]);
+            }
         }
+        System.out.println(" ");
         System.out.println("请输入第二个数列：");
         counter2 = cin(numbers2);
-        System.out.println("你输入的是：");
-        for (i = 0; i < counter2; i++) {
-            System.out.println(numbers2[i]);
-        }
         merge(numbers, numbers2, counter1, counter2);
         counter3 = counter2 + counter1;
         sort(numbers, counter3);
